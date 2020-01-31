@@ -15,10 +15,13 @@ html {
 * {
   box-sizing: inherit;
 }
+
 body {
   font-family: var(--font-roboto);
+  margin: 0;
   line-height: normal;
 }
+
 /*LIST*/
 .list {
   margin: 0;
@@ -28,6 +31,7 @@ body {
 
 /*TIILE*/
 .title {
+  position: relative;
   font-size: 48px;
   font-weight: 900;
   color: #515151;
@@ -50,15 +54,9 @@ body {
   background-color: var(--accent-color);
 }
 /*Contact-item*/
-.page-nav .link {
-  display: inline-flex;
-  font-weight: 300;
-  text-decoration: none;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-bottom: 15px;
-  padding-top: 15px;
-  color: #fefefe;
+.page-nav {
+  display: flex;
+  align-items: center;
 }
 
 .contact-item {
@@ -78,8 +76,8 @@ body {
 .phone::before {
   content: '';
   display: block;
-  height: 19px;
-  width: 17px;
+  height: 20px;
+  width: 20px;
   margin-right: 5px;
   background-image: url(../images/icons/phone.png);
   background-repeat: no-repeat;
@@ -89,8 +87,8 @@ body {
 .email::before {
   content: '';
   display: block;
-  height: 19px;
-  width: 17px;
+  height: 20px;
+  width: 20px;
   margin-right: 5px;
   background-image: url(../images/icons/mail.png);
   background-repeat: no-repeat;
@@ -103,22 +101,20 @@ body {
   margin-left: auto;
 }
 
-.item {
-  display: block;
+.page-nav .link {
+  display: flex;
+  font-weight: 300;
   text-decoration: none;
-  color: #fff;
-  font-family: var(--font-opensans);
-  font-size: 14px;
-  font-weight: 400;
-  padding-left: 13px;
-  padding-right: 13px;
-  padding-bottom: 10px;
+  padding: 15px;
+  color: #fefefe;
 }
+
+/*NAVIGATION*/
 
 .nav {
   display: flex;
   align-items: center;
-  background-color: var(--white-color);
+  min-height: 90px;
 }
 /*LOGO*/
 .logo {
@@ -151,13 +147,10 @@ body {
   font-family: var(--font-opensans);
   font-size: 14px;
   font-weight: 900;
-  padding-left: 13px;
-  padding-right: 13px;
-  padding-bottom: 10px;
-}
 
-.nav .nav-link:last-child {
-  padding-right: 0px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 10px;
 }
 
 .nav-link:hover,
@@ -165,6 +158,76 @@ body {
   color: var(--accent-color);
 }
 
+/*BANNER*/
+
+.banner {
+  position: relative;
+  height: 600px;
+  background-image: linear-gradient(
+      rgba(24, 24, 24, 0.5),
+      rgba(50, 50, 50, 0.5)
+    ),
+    url(../images/background/Rectangle-1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 745px;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 48px;
+  color: #fffcfc;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 400;
+  text-align: center;
+}
+
+.hero-title .first {
+  display: block;
+  font-family: var(--font-roboto);
+  font-weight: 300;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.hero-title .second {
+  font-weight: 900;
+  color: var(--accent-color);
+}
+
+.hero-title .last {
+  font-weight: 600;
+  color: var(--accent-color);
+  letter-spacing: -2px;
+}
+
+.hero-link {
+  display: inline-block;
+  font-size: 14px;
+  color: var(--white-color);
+  font-family: var(--font-roboto);
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 15px 30px;
+  background-color: var(--accent-color);
+  margin-top: 20px;
+}
+
+.hero-link:hover,
+.hero-link:focus {
+  background-color: #7fd9c7;
+}
 /*GALERY*/
 .gallery {
   padding-top: 110px;
