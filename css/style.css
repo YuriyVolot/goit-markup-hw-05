@@ -110,6 +110,11 @@ body {
   color: #fefefe;
 }
 
+.link:hover,
+.link:focus {
+  color: var(--button-color);
+}
+
 /*NAVIGATION*/
 
 .nav {
@@ -539,8 +544,8 @@ body {
   height: 50px;
 }
 
-.blog-item .button:hover,
-.blog-item .button {
+.blog-link:hover,
+.blog-link:focus {
   color: #fff;
   background-color: #7fd9c7;
 }
